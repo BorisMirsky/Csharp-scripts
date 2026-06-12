@@ -1,0 +1,34 @@
+Разобрать с примерами часть из этого списка:
+
+Внутренности CLR: 
+загрузка сборок, JIT и AOT, GC и поколения, модель памяти, layout объектов.
+
+Память без аллокаций: 
+Span, Memory, ArrayPool, ref struct, stackalloc, паттерны zero-allocation.
+
+Асинхронность глубоко: 
+state machine async/await, Task vs ValueTask, ConfigureAwait, синхронизационные контексты, отмена и таймауты.
+
+Многопоточность: 
+TPL, lock-free структуры, System.Threading.Channels, паттерны producer/consumer и pipeline.
+
+Метапрограммирование: 
+Reflection, Expression Trees, Source Generators и Roslyn API для генерации кода во время компиляции.
+
+Производительность и профилирование: 
+BenchmarkDotNet, dotTrace, PerfView, ETW, чтение JIT-вывода.
+
+Архитектура: 
+Clean Architecture, DDD, CQRS, Event Sourcing на примере реального сервиса.
+
+Микросервисы: gRPC, MassTransit, Saga, Outbox, идемпотентность.
+
+Безопасность: аутентификация, OWASP API Top 10, защита от типичных атак на .NET-приложения.
+
+EF Core продвинутый: оптимизация запросов, миграции, проблема N+1, правильная работа с DbContext.
+
+Production: Observability через OpenTelemetry, диагностика дампов, health-чеки, надёжность.
+
+
+
+Тестирование: unit, integration, contract тесты, моки, in-memory БД.
