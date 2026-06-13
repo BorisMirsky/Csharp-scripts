@@ -2,10 +2,7 @@
 
 using System;
 
-// ==================================================================
 // ref struct - структуры, живущие ТОЛЬКО на стеке
-// Все объявления ref struct допустимы на уровне файла
-// ==================================================================
 
 ref struct BufferWrapper
 {
@@ -49,7 +46,6 @@ ref struct DoubleBufferWrapper<T>
     public Span<T> this[int index] => index switch { 0 => _first, 1 => _second, _ => throw new IndexOutOfRangeException() };
 }
 
-// Вся логика примера внутри локальной функции (без top-level переменных)
 void DemonstrateRefStruct()
 {
     Console.WriteLine("=== ref struct демонстрация ===\n");
@@ -109,7 +105,6 @@ void DemonstrateRefStruct()
     Console.WriteLine("8. DoubleBufferWrapper (ref struct) – два буфера без аллокаций:");
     Console.WriteLine($"   First[0] = {doubleBuf[0][0]}, Second[1] = {doubleBuf[1][1]}\n");
 
-    Console.WriteLine("=== Итог: ref struct — мощный инструмент zero-allocation паттернов, но с чёткими ограничениями ===");
 }
 
 // Вызов локальной функции (единственный top-level statement)
