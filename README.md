@@ -8,9 +8,7 @@ Standalone C# scripts (.csx) – run with dotnet script, no projects required.
 ## Требования
 
 - [.NET SDK 8.0 или выше](https://dotnet.microsoft.com/download)
-- Утилита [`dotnet-script`](https://github.com/filipw/dotnet-script). 
-
-Ставится глобально, т.е. в любом месте:  ```dotnet tool install -g dotnet-script```
+- Утилита [`dotnet-script`](https://github.com/filipw/dotnet-script). Ставится глобально, т.е. в любом месте:  ```dotnet tool install -g dotnet-script```
 
 ## Запуск
 Перейти в папку со скриптом и выполнить:

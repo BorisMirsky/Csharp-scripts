@@ -6,7 +6,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
-Console.WriteLine("=== Task Parallel Library (TPL) демонстрация ===\n");
 
 // 1. Простейший Task
 Console.WriteLine("1. Task без результата:");
@@ -142,4 +141,3 @@ _ = Task.Run(async () =>
 int manualResult = await tcs.Task;
 Console.WriteLine($"   Результат от TaskCompletionSource: {manualResult}\n");
 
-Console.WriteLine("=== Конец раздела TPL ===");
