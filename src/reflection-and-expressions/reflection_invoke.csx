@@ -30,7 +30,8 @@ class Calculator
 #pragma warning restore CS0649
 
 
-// 2. Создание экземпляра через Activator.CreateInstance
+// 2. Создание экземпляра через Activator.CreateInstance - метод рефлексии, 
+//             позволяет создавать экземпляры класса динамически во время работы программы (runtime)
 
 Console.WriteLine("1. Создание объекта:");
 
@@ -201,14 +202,17 @@ class PrivateCtorClass
     private PrivateCtorClass() { }
     public static PrivateCtorClass Create() => new PrivateCtorClass();
 }
+
 try
 {
     var obj = Activator.CreateInstance(typeof(PrivateCtorClass));
 }
+
 catch (MissingMethodException ex)
 {
     Console.WriteLine($"   Activator.CreateInstance не сработал: {ex.Message}");
 }
+
 // Через ConstructorInfo с флагом NonPublic
 ConstructorInfo privateCtor = typeof(PrivateCtorClass).GetConstructor(BindingFlags.NonPublic | BindingFlags.Instance, null, Type.EmptyTypes, null);
 var privateObj = privateCtor.Invoke(null);

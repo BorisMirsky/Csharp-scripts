@@ -1,34 +1,51 @@
-Разобрать с примерами часть из этого списка:
 
-Внутренности CLR: 
-загрузка сборок, JIT и AOT, GC и поколения, модель памяти, layout объектов.
+Темы взяты из курса 'C# продвинутый' https://stepik.org/course/288694/promo.
+Попробую разобрать с примерами часть тем из этого курса.
 
-Память без аллокаций: 
-Span, Memory, ArrayPool, ref struct, stackalloc, паттерны zero-allocation.
 
-Асинхронность глубоко: 
-state machine async/await, Task vs ValueTask, ConfigureAwait, синхронизационные контексты, отмена и таймауты.
 
-Многопоточность: 
-TPL, lock-free структуры, System.Threading.Channels, паттерны producer/consumer и pipeline.
+1) done:
 
-Метапрограммирование: 
-Reflection, Expression Trees, Source Generators и Roslyn API для генерации кода во время компиляции.
+Память без аллокаций: Span, Memory, ArrayPool, ref struct, stackalloc, паттерны zero-allocation.
 
-Производительность и профилирование: 
-BenchmarkDotNet, dotTrace, PerfView, ETW, чтение JIT-вывода.
+Многопоточность: TPL, lock-free структуры, System.Threading.Channels, паттерны producer/consumer и pipeline.
 
-Архитектура: 
-Clean Architecture, DDD, CQRS, Event Sourcing на примере реального сервиса.
+InProcess: 
+Метапрограммирование: Reflection, Expression Trees, Source Generators и Roslyn API для генерации кода во время компиляции.
 
-Микросервисы: gRPC, MassTransit, Saga, Outbox, идемпотентность.
 
-Безопасность: аутентификация, OWASP API Top 10, защита от типичных атак на .NET-приложения.
+
+
+2) todo:
+
+Внутренности CLR: загрузка сборок, JIT и AOT, GC и поколения, модель памяти, layout объектов.
+
+Асинхронность глубоко: state machine async/await, Task vs ValueTask, ConfigureAwait, синхронизационные контексты, отмена и таймауты.
+
+Производительность и профилирование: BenchmarkDotNet, dotTrace, PerfView, ETW, чтение JIT-вывода.
 
 EF Core продвинутый: оптимизация запросов, миграции, проблема N+1, правильная работа с DbContext.
 
 Production: Observability через OpenTelemetry, диагностика дампов, health-чеки, надёжность.
 
-
-
 Тестирование: unit, integration, contract тесты, моки, in-memory БД.
+
+
+
+
+3) ? (большинство тем ниже делал раньше, проекты лежат в репозитории):
+
+Архитектура: Clean Architecture, DDD, CQRS, Event Sourcing на примере реального сервиса.   
+
+Микросервисы: gRPC, MassTransit, Saga, Outbox, идемпотентность.
+
+Безопасность: аутентификация, OWASP API Top 10, защита от типичных атак на .NET-приложения.
+
+
+
+
+
+
+
+expressions_accessors.csx
+reflection_vs_expression_performance.csx

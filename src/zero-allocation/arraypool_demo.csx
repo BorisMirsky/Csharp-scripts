@@ -4,6 +4,9 @@ using System;
 using System.Buffers;
 using System.Threading.Tasks;
 
+// Для уменьшения аллокаций в современном .NET есть разные способы.
+// Иногда объект можно переиспользовать. Для самых крупных объектов — массивов
+// в .NET встроены несколько реализаций ArrayPool<T>.
 
 
 // Структура-владелец с реализацией IDisposable для using
@@ -35,7 +38,7 @@ async Task RunExamples()
 	
     // 1. Базовое использование
     Console.WriteLine("1. Базовое использование:");
-    int[] rentedArray = ArrayPool<int>.Shared.Rent(10);
+    int[] rentedArray = ArrayPool<int>.Shared.Rent(10);  // Rent извлекает буфер запрошенной длины.
     try
     {
         Console.WriteLine($"Арендован массив длиной {rentedArray.Length} (запрошено 10)");
@@ -112,7 +115,7 @@ async Task RunExamples()
 
     // 6. Ошибка: возврат арендованного массива
     Console.WriteLine("6. ОШИБОЧНЫЙ паттерн: возврат арендованного массива из метода");
-    Console.WriteLine("   public int[] GetData() { var arr = ArrayPool<int>.Shared.Rent(100); return arr; } // утечка");
+    Console.WriteLine("   public int[] GetData() { var arr = ArrayPool<int>.Shared.Rent(100); return arr; } ");  // утечка
     Console.WriteLine();
 
     // 7. Большие данные
