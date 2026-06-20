@@ -47,5 +47,5 @@ Production: Observability через OpenTelemetry, диагностика да�
 
 
 
-expressions_accessors.csx
+
 reflection_vs_expression_performance.csx
