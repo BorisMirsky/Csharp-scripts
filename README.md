@@ -11,6 +11,4 @@ Standalone C# scripts (.csx) – run with dotnet script, no projects required.
 - Утилита [`dotnet-script`](https://github.com/filipw/dotnet-script). Ставится глобально, т.е. в любом месте:  ```dotnet tool install -g dotnet-script```
 
 ## Запуск
-Перейти в папку со скриптом и выполнить:
-
-```dotnet script file.csx```
+Перейти в папку со скриптом и выполнить: ```dotnet script file.csx```

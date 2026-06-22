@@ -12,11 +12,11 @@
 
 Метапрограммирование: Reflection, Expression Trees.
 
+Асинхронность: state machine async/await, Task vs ValueTask, ConfigureAwait, синхронизационные контексты, отмена и таймауты.
+
 
 
 2) todo:
-
-Асинхронность: state machine async/await, Task vs ValueTask, ConfigureAwait, синхронизационные контексты, отмена и таймауты.
 
 Производительность и профилирование: BenchmarkDotNet, dotTrace, PerfView, ETW, чтение JIT-вывода.
 
