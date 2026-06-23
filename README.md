@@ -12,3 +12,4 @@ Standalone C# scripts (.csx) – run with dotnet script, no projects required.
 
 ## Запуск
 Перейти в папку со скриптом и выполнить: ```dotnet script file.csx```
+
